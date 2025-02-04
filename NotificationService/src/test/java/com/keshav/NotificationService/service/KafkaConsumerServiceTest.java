@@ -18,7 +18,7 @@ public class KafkaConsumerServiceTest {
 
     @Test
     public void testConsumeMessage() {
-        String requestId = "12345";
+        String requestId = "12345678";
         kafkaConsumerService.consumeMessage(requestId);
         verify(smsProcessingService, times(1)).processSmsRequest(requestId);
     }
